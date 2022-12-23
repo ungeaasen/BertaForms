@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Buttons from "./Buttons";
 
 const Form = () => {
   const [submit, setSubmit] = useState(false);
@@ -48,7 +49,19 @@ const Form = () => {
                 autoComplete={false}
               />
             </fieldset>
-            <fieldset>
+			<h3>Spørsmål 1</h3>
+			<div className="buttonsbox">
+				<div className="container">
+					<Buttons name="entry.828730649"/>
+				</div>
+			</div>
+			<h3>Spørsmål 2</h3>
+			<Buttons name="entry.8287306466"/>
+			<h3>Spørsmål 3</h3>
+			<Buttons name="entry.828730644"/>
+			<h3>Spørsmål 4</h3>
+			<Buttons name="entry.828730633"/>
+           {/* <fieldset>
             	<label htmlFor="entry.828730649">Enig</label>
 				<input
 					required
@@ -114,6 +127,7 @@ const Form = () => {
               	/>
               	<label htmlFor="entry.828730649">Ikke enig</label>
             </fieldset>
+		*/}
 
             <button type="submit">Send inn!</button>
           </form>

@@ -3,9 +3,9 @@
   text-align: center;
 }
 $primary-color: #111111;
-$secondary-color: #777777;
+$secondary-color: #dddddd;
 $secondary-120:red;
-$background-color: #dddddd;
+$background-color: #777777;
 
 .formWrapper {
   position: fixed;
@@ -107,10 +107,14 @@ $background-color: #dddddd;
         }
         form {
           display:grid;
-        grid-template-columns: repeat(2,1fr);
+          grid-template-columns: repeat(1,1fr);
           fieldset {
             border: none;
             margin-bottom: 2rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             label {
               display: block;
               text-align: left;
@@ -122,6 +126,27 @@ $background-color: #dddddd;
               text-transform: uppercase;
             }
 
+            input[type="radio"] {
+              appearance: none;
+              background-color: #fff;
+              margin: 20px;
+              font: inherit;
+              color: currentColor;
+              width: 3.15em;
+              height: 3.15em;
+              border: 0.15em solid currentColor;
+              border-radius: 50%;
+              transform: translateY(-0.075em);
+              transition: border 0.4s linear;
+              transition: background-color 0.6s linear;
+              &:hover {
+                background-color: rgb(63, 109, 249);
+                border: 0.45em solid rgb(175, 193, 249)
+              }
+              &:focus {
+                background-color: rgb(63, 109, 249);
+              }
+            }
             input,
             textarea {
               width: 100%;
@@ -141,7 +166,7 @@ $background-color: #dddddd;
               }
               &:active{
                 color:  $background-color;
-                background-color: transparent;
+                background-color: rgb(63, 109, 249);
 
               }
             }
